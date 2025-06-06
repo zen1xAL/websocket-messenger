@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebSocket Messenger</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>WebSocket Messenger</h1>
+    </header>
+    <section class="connection-panel">
+      <input type="text" id="host" placeholder="IP адрес (например, localhost)">
+      <input type="number" id="port" placeholder="Порт (например, 3000)">
+      <button id="connect-btn">Подключиться</button>
+    </section>
+    <section class="chat-container" id="chat-container" style="display: none;">
+      <div class="chat" id="chat"></div>
+      <div class="input-area">
+        <input type="text" id="message" placeholder="Введите сообщение или /send <путь>">
+        <button id="send-btn">Отправить</button>
+        
+        <button id="file-btn">Файл</button>
+        <button id="disconnect-btn">Отключиться</button>
+      </div>
+      <div class="progress-bar" id="progress-bar" style="display: none;">
+        <progress id="progress" value="0" max="100"></progress>
+        <span id="progress-text"></span>
+      </div>
+    </section>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>
