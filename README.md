@@ -21,7 +21,7 @@ Supports real-time chat and file transfer between clients.
 ### 1. Clone the project
 
 ```bash
-git clone https://github.com/yourname/ws-messenger.git
+git clone https://github.com/zen1xAL/websocket-messenger.git
 cd ws-messenger
 ```
 
@@ -70,20 +70,5 @@ You can launch multiple clients (same machine or LAN).
 * Electron
 * Node.js `fs`, `path`, `os`, `http`
 * ws (WebSocket server)
-
----
-
-## ⚠️ Notes
-
-* File chunks are sent as binary `ArrayBuffer` over WebSocket.
-* Transfer is one-way broadcast: all clients receive the file.
-* File is saved as `received_ws_<filename>` in current folder.
-* Works offline in LAN.
-
----
-
-## 🧪 Tested On
-
-* Windows 11 
 
 ---
