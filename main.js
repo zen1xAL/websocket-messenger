@@ -12,14 +12,14 @@ function createWindow() {
     },
   });
   win.loadFile('index.html');
-  win.setMenuBarVisibility(false); // Убираем стандартное меню
+  win.setMenuBarVisibility(false);
 }
 
 ipcMain.handle('dialog:open-file', async () => {
   const result = await dialog.showOpenDialog({
     properties: ['openFile']
   });
-  return result; // { canceled: Boolean, filePaths: [String] }
+  return result;
 });
 
 app.whenReady().then(createWindow);
